@@ -1,0 +1,6 @@
+values.plist
+.DS_Store
+xcuserdata/
+*.xcworkspace
+*.xctimeline
+*.hmap
