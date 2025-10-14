@@ -184,15 +184,15 @@ struct ContentView: View {
                                 viewModel.removeValue(value.id)
                             }
                             
-                            if let _ = value.result {
+                            Button("Copy Original") {
+                                NSPasteboard.general.clearContents()
+                                NSPasteboard.general.setString(value.original, forType: .string)
+                            }
+                            
+                            if let result = value.result {
                                 Button("Copy Result") {
-                                    let encoder = JSONEncoder()
-                                    encoder.outputFormatting = [.sortedKeys]
-                                    
-                                    let json = String(data: try! encoder.encode(value), encoding: .utf8)
-                                    
                                     NSPasteboard.general.clearContents()
-                                    NSPasteboard.general.setString(json!, forType: .string)
+                                    NSPasteboard.general.setString(result, forType: .string)
                                 }
                             }
                         }

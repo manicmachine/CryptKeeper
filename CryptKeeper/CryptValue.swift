@@ -31,10 +31,4 @@ class CryptValue: Identifiable, Encodable {
         self.original = original
         self._result = result
     }
-    
-    enum CodingKeys: String, CodingKey {
-        case name
-        case _original = "original"
-        case __result = "result"
-    }
 }
