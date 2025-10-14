@@ -94,11 +94,6 @@ struct ContentView: View {
                             Text("Encrypt").tag(ActionType.ENCRYPT)
                             Text("Decrypt").tag(ActionType.DECRYPT)
                         }
-                        .onChange(of: actionType) { _, newValue in
-                            if newValue == .DECRYPT {
-                                self.generateKey = false
-                            }
-                        }
                     }
                     .padding(.bottom, 4)
                     
