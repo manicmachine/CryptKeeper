@@ -78,7 +78,7 @@ Masking via XOR is **not encryption** and **does not provide cryptographic secur
 3. **Choose key behavior**
 
    * **Generate key** (CryptKeeper generates a new symmetric key)
-   * Or provide your own key (depending on your build/UI, supply the Base64 key as required)
+   * Or provide your own key
 
 4. **Optional: Mask key**
 
